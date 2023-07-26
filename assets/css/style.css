@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+:root{
+    --color-dark: #212529;
+    --color-light: #faf9fa;
+    --color-primary: #1282a2;
+}
+
+/* ************************************************ */
+.bg-dark{
+    background: var(--color-dark);
+}
+
+.bg-light{
+    background: var(--color-light);
+}
+
+.bg-primary{
+    background: var(--color-primary);
+}
+
+.txt-light{
+    color: var(--color-light);
+}
+
+.txt-primary{
+    color: var(--color-primary);
+}
+
+.txt-size-3{
+    font-size: 48px;
+}
+
+.neo-dark{
+    box-shadow: 5px 5px 5px #1d1f25, -5px -5px 10px #272a35;
+    background: #212529;
+}
+
+.neo-light{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.8);
+    background: #f8f9fa;
+}
+
+/* ********************************************* */
+/* *************  H E A D E R ****************** */
+/* ******************************************** */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+.logo{
+    display: flex;
+    margin: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.nav-menu{
+    display: none;
+}
+
+#menu-toggle{
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    margin-right: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggle{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 40px; 
+    right: 40px;
+    z-index: 999;
+}
+
+.nav-menu.active{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: fixed;
+    top: 60px;
+    right: 0;
+}
+
+.nav-menu.active .nav-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu.active .nav-list .nav-item{
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+header .nav-menu .nav-list .nav-item:hover{
+    box-shadow: none;
+}
+
+header .nav-menu .nav-list .nav-item .nav-link{
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease;
+    padding: 5px;
+}
+
+/* ***************************************** */
+/* *************  M A I N ****************** */
+/* **************************************** */
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+
+/* ******************************************* */
+
+#accueil{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container{
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.text-container div{
+    overflow: hidden;
+}
+
+/* ************************************************ */
+
+#apropos{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#apropos div{
+    overflow: hidden;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+}
+/* ************************************************ */
+
+#contact{
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input{
+    height: 45px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+textarea{
+    width: 95%;
+    resize: none;
+    margin: 5px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type="submit"]{
+    width: 95%;
+    margin: 5px;
+    background: var(--color-primary);
+    color: var(--color-light);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background: var(--color-light);
+    color: var(--color-dark);
+}
+
+/* ******************************************** */
+/* ************* F O O T E R ****************** */
+/* ******************************************* */
+footer{
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    position: relative;
+    bottom: 50px;
+    left: 0;
+    z-index: 2;
+}
+
+footer div{
+    display: flex;
+    width: 40%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+footer div a{
+    overflow: hidden;
+    padding: 20px;
+}
+
+footer div a i{
+    width: 40px;
+    height: 40px;
+    transition: all .3s ease;
+}
+
+footer div a i:hover{
+    transform: scale(1.2);
+}
+@media only screen and (max-width: 600px){
+    header{
+        height: 40px;
+    }
+
+    .logo{
+        visibility: hidden;
+    }
+
+    .txt-size-3{
+        font-size: 28px;
+    }
+
+    input{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    footer{
+        width: 95%;
+    }
+    footer div{
+        width: 100%;
+    }
+}
