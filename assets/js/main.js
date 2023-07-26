@@ -54,6 +54,20 @@ let toavina = {
     contact : {
         formContainer : {
             classList : ["form-container", "bg-light", "txt-size-3", "neo-light", "container"],
+        },
+        reseaux : {
+            facebook : {
+                link : "https://www.facebook.com/toavina14jr.sylvianno",
+                icon : '<i class="fab fa-facebook"></i>'
+            },
+            github : {
+                link : "https://github.com/ToavinaJr",
+                icon : '<i class="fab fa-github"></i>'
+            },
+            linkedin : {
+                link : "https://www.linkedin.com/in/votre-profil",
+                icon : '<i class="fab fa-linkedin"></i>'
+            }
         }
     }
 }
@@ -183,6 +197,20 @@ contact.append(formContainer)
 main.append(accueil)
 main.append(apropos)
 main.append(contact)
+
+let facebook = document.getElementById('facebook')
+facebook.href = toavina.contact.reseaux.facebook.link
+facebook.innerHTML = toavina.contact.reseaux.facebook.icon
+
+let github = document.getElementById('github')
+github.href = toavina.contact.reseaux.github.link
+github.innerHTML = toavina.contact.reseaux.github.icon
+
+let linkedin = document.getElementById('linkedin')
+linkedin.href = toavina.contact.reseaux.linkedin.link
+linkedin.innerHTML = toavina.contact.reseaux.linkedin.icon
+
+
 let menu_toggle = document.getElementById('menu-toggle')
 menu_toggle.addEventListener('click', () =>{
     let nav = document.querySelector('nav')
